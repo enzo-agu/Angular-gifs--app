@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+
+  <img class="card-img-top animate__animated animate__fadeIn" [src]="url" [alt]="alt"
+  (load)="onLoaded()"
+  [ngStyle]="{display:hasLoaded ? '' : 'none'}">
+
+  <!-- LAS IMAGENES TIENEN UN EVENTO LOAD, "NGSTYLE SIRVE PARA CARGAR ESTILOS DE MANERA CONDICIONAL" -->
+
+  <img
+  *ngIf="!hasLoaded"
+  class="mt-3" height="35" width="35" src="assets/loader.svg" alt="">
+                                         <!--LOADER ☝️  -->
+</div>

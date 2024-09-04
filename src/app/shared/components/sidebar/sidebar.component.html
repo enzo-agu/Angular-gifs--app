@@ -1,0 +1,17 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3 class="text-light">GifsApp</h3>
+  <hr class="text-white" />
+
+  <!-- ITERO TAGS YA QUE ES EL MÉTODO QUE ME TRAE EL [] DEL 👇 SERVICIO -->
+  <div class="list-group list reset" *ngFor="let btn of tags">
+    <button
+      class="list-group-item list-group-item-action"
+      (click)="searchSidebarTag(btn)"
+    >
+      {{ btn | titlecase }}
+      <!-- ☝️ PIPE PARA QUE LA PRIM LETRA DE UNA PALABRA APAREZCA
+       EN MAYÚSCULA Y LUEGO TODO EN MINÚSCULA, EL PIPE UPPERCASE
+       SE USA PARA COLOCAR TODAS LAS LETRAS EN MAYÚSCULA. -->
+    </button>
+  </div>
+</div>
